@@ -1,0 +1,26 @@
+{"My Three Favourite Books" :[
+	{
+	"Title" : "Engineering Mathematics",
+	"Author" : ["K.A Stroud", "Dexter Booth"],
+	"Publisher" : "Macmillian Education",
+	"Year" : 2020,
+	"Edition" : "8th",
+	"ISBN" : "978-1-352-01027-5"
+	},
+	{
+	"Title" : "Data Science for Business",
+	"Author" : ["Foster Provost", "Tom Fawcett"],
+	"Publisher" : "O’Reilly Media, Inc",
+	"Year" : 2013,
+	"Edition" : "1st",
+	"ISBN" : "978-1-449-36132-7"
+	},
+	{
+	"Title" : "The Language of SQL",
+	"Author" : ["Larry Rockoff"],
+	"Publisher" : "Addison Wesley Professional",
+	"Year" : 2016,
+	"Edition" : "2nd",
+	"ISBN" : "978-0-134-65825-4"
+	}]
+}
