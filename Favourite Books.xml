@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<My_three_Favourite_Books>
+	<book id = "bk1">
+    	<Title>Engineering Mathematics</Title>
+        <Author>K.A Stroud; Dexter Booth</Author>
+        <Publisher>Macmillian Education</Publisher>
+        <Year>2020</Year>
+        <Edition>8th</Edition>
+        <ISBN>978-1-352-01027-5</ISBN>
+	</book>
+    	<book id = "bk2">
+    	<Title>Data Science for Business</Title>
+        <Author>Foster Provost; Tom Fawcett</Author>
+        <Publisher>O’Reilly Media, Inc</Publisher>
+        <Year>2013</Year>
+        <Edition>1st</Edition>
+        <ISBN>978-1-449-36132-7</ISBN>
+	</book>
+	<book id = "bk3">
+    	<Title>The Language of SQL</Title>
+        <Author>Larry Rockoff</Author>
+        <Publisher>Addison Wesley Professional</Publisher>
+        <Year>2016</Year>
+        <Edition>2nd</Edition>
+        <ISBN>978-0-134-65825-4</ISBN>
+	</book>
+</My_three_Favourite_Books>
