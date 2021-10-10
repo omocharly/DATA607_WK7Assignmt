@@ -1,0 +1,79 @@
+---
+title: "Working with XML and JSON in R"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+### Title: CUNY SPS MDS DATA607_WK7Assignmt"
+### Author: Charles Ugiagbe
+### Date: "10/10/2021"
+
+
+
+##        Load the required R Packages
+
+```{r}
+library(tidyverse)
+library(XML)
+library(rvest)
+library(jsonlite)
+```
+
+```{r}
+library(knitr)
+library(httr)
+```
+
+
+
+##        Read the HTML data into R
+
+```{r}
+url <- "https://raw.githubusercontent.com/omocharly/DATA607_WK7Assignmt/main/Favourite%20Books.html"
+df_HTML <- url %>%
+  read_html(encoding = 'UTF-8') %>%
+  html_table(header = NA, trim = TRUE) %>%
+  .[[1]]
+
+kable(df_HTML)
+```
+
+
+
+##     Read the XML data into R
+
+```{r}
+url2 <- GET("https://raw.githubusercontent.com/omocharly/DATA607_WK7Assignmt/main/Favourite%20Books.xml",
+      add_headers(c(Accept = "application/xml",
+                    Authorization = "5c81-e875-48f7-98-ee78")))
+df_XML <- url2 %>%
+  xmlParse() %>%
+  xmlRoot() %>%
+  xmlToDataFrame(stringsAsFactors = FALSE)
+kable(df_XML)
+```
+
+##        Read the Json data into R
+
+```{r}
+url3 <- "https://raw.githubusercontent.com/omocharly/DATA607_WK7Assignmt/main/Favourite%20Books.json"
+df_JSON = fromJSON(url3)
+kable(df_JSON)
+```
+
+##    Comparison Between HTML, XML and JSON Dataframe
+
+```{r}
+identical(df_HTML, df_XML)
+```
+
+```{r}
+identical(df_HTML, df_JSON)
+```
+
+```{r}
+identical(df_XML, df_JSON)
+```
+
+**The three data frame are not identical but are pretty similar to each other.**
